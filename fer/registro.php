@@ -16,7 +16,7 @@ if(isset($_POST['regis'])){
     $validacon= $conexion->query($validar);
     if($validacon->num_rows >0){
         ?>
-        <h3 class="ok"> Tu Nickname y/o Correo ya se encuentran registrados </h3>
+        <h3 class="ok"> El usuario o Correo ya se encuentran registrados, por favor ingresa otros. </h3>
         <?php
 
     }
@@ -55,17 +55,17 @@ if(isset($_POST['regis'])){
 
     <h1>!Registrate!</h1>
 
-    <input type="text" name="nom" placeholder="Nombre"><br><br>
+    <input type="text" name="nom" placeholder="Nombre" required><br><br>
 
-    <input type="text" name="apell" placeholder="Apellido"><br><br>
+    <input type="text" name="apell" placeholder="Apellido" required><br><br>
 
-    <input type="text" name="genero" placeholder="Genero"><br><br>
+    <input type="text" name="genero" placeholder="Genero" required><br><br>
 
-    <input type="text" name="user" placeholder="User"><br><br>
+    <input type="text" name="user" placeholder="User" required><br><br>
 
-    <input type="email" name="correo" placeholder="Correo electronico"><br><br>
+    <input type="email" name="correo" placeholder="Correo electronico" required><br><br>
 
-    <input type="password" name="contra" placeholder="contraseña"><br><br>
+    <input type="password" name="contra" placeholder="contraseña" required><br><br>
 
     <button class="btn btn-danger" type="submit" Value="registrarse" name="regis">Registrarse</button>
 </form>
